@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/mode-toggle";
 import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <main className='flex flex-col'>
       Hello Discord Clone
       <UserButton afterSignOutUrl="/" />
+      <ModeToggle />
     </main>
   )
 }
