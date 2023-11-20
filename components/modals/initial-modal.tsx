@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -34,6 +35,8 @@ export const InitialModal = () => {
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => setIsMounted(true), []);
 
+  const router = useRouter();
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,10 +45,37 @@ export const InitialModal = () => {
     }    
   });
 
+  const postData = async (url: string = "", data: object = {}) => {
+    const response = await fetch(url, {
+      method: "POST",
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      redirect: "follow",
+      referrerPolicy: "no-referrer",
+      body: JSON.stringify(data),
+    });
+
+    return response.json();
+  }
+
+
   const isLoading = form.formState.isSubmitting;
   
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+    try {
+      const result = await postData("/api/servers", values);
+
+      form.reset();
+      router.refresh();
+      window.location.reload();
+
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   if (!isMounted) return null;
@@ -85,6 +115,7 @@ export const InitialModal = () => {
                         disabled={isLoading}
                         className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
                         placeholder="Enter server name"
+                        autoComplete="off"
                         {...field}
                       />
                     </FormControl>

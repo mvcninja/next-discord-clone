@@ -19,6 +19,7 @@ const SetupPage = async () => {
     return redirect(`/servers/${server.id}`);
   }
 
+  // render the setup dialog
   return (
     <InitialModal />
   );
