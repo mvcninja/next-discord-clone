@@ -1,0 +1,174 @@
+{
+    "plugins": [
+        {
+            "metadata": {
+                "id": "4db62a7c-7d70-419c-96d2-6c3a4dc77ea5",
+                "publisherId": "bradlc.vscode-tailwindcss",
+                "publisherDisplayName": "bradlc"
+            },
+            "name": "vscode-tailwindcss",
+            "publisher": "bradlc",
+            "version": "0.10.3"
+        },
+        {
+            "metadata": {
+                "id": "a84825e8-5f04-4988-b85a-4942e795bcbe",
+                "publisherId": "burkeholland.simple-react-snippets",
+                "publisherDisplayName": "burkeholland"
+            },
+            "name": "simple-react-snippets",
+            "publisher": "burkeholland",
+            "version": "1.2.7"
+        },
+        {
+            "metadata": {
+                "id": "e6428a24-2ee1-45b1-acc2-b3d0f2973b5c",
+                "publisherId": "dalirnet.doctypes",
+                "publisherDisplayName": "dalirnet"
+            },
+            "name": "doctypes",
+            "publisher": "dalirnet",
+            "version": "1.0.6"
+        },
+        {
+            "metadata": {
+                "id": "5960f38e-0bbe-4644-8f9c-9c8824e82511",
+                "publisherId": "donjayamanne.githistory",
+                "publisherDisplayName": "donjayamanne"
+            },
+            "name": "githistory",
+            "publisher": "donjayamanne",
+            "version": "0.6.20"
+        },
+        {
+            "metadata": {
+                "id": "4de763bd-505d-4978-9575-2b7696ecf94e",
+                "publisherId": "eamodio.gitlens",
+                "publisherDisplayName": "eamodio"
+            },
+            "name": "gitlens",
+            "publisher": "eamodio",
+            "version": "14.5.1"
+        },
+        {
+            "metadata": {
+                "id": "f60a60a6-95ba-42d4-b41c-3d24c1b89588",
+                "publisherId": "EditorConfig.EditorConfig",
+                "publisherDisplayName": "EditorConfig"
+            },
+            "name": "EditorConfig",
+            "publisher": "EditorConfig",
+            "version": "0.16.4"
+        },
+        {
+            "metadata": {
+                "id": "d3836729-9cc1-42c1-b2af-d50071f57d29",
+                "publisherId": "formulahendry.auto-close-tag",
+                "publisherDisplayName": "formulahendry"
+            },
+            "name": "auto-close-tag",
+            "publisher": "formulahendry",
+            "version": "0.5.14"
+        },
+        {
+            "metadata": {
+                "id": "6e440e71-8ed9-4f25-bb78-4b13096b8a03",
+                "publisherId": "formulahendry.auto-rename-tag",
+                "publisherDisplayName": "formulahendry"
+            },
+            "name": "auto-rename-tag",
+            "publisher": "formulahendry",
+            "version": "0.1.10"
+        },
+        {
+            "metadata": {
+                "id": "a6a0c5b2-d078-4bf5-a9ee-4e37054414b3",
+                "publisherId": "formulahendry.code-runner",
+                "publisherDisplayName": "formulahendry"
+            },
+            "name": "code-runner",
+            "publisher": "formulahendry",
+            "version": "0.12.1"
+        },
+        {
+            "metadata": {
+                "id": "4012f8d4-6f43-4dde-8251-28939509032b",
+                "publisherId": "josh-walters.vscode-ext-import-export",
+                "publisherDisplayName": "josh-walters"
+            },
+            "name": "vscode-ext-import-export",
+            "publisher": "josh-walters",
+            "version": "0.0.9"
+        },
+        {
+            "metadata": {
+                "id": "0479fc1c-3d67-49f9-b087-fb9069afe48f",
+                "publisherId": "ms-azuretools.vscode-docker",
+                "publisherDisplayName": "ms-azuretools"
+            },
+            "name": "vscode-docker",
+            "publisher": "ms-azuretools",
+            "version": "1.28.0"
+        },
+        {
+            "metadata": {
+                "id": "d0bfc4ab-1d3a-4487-8782-7cf6027b4fff",
+                "publisherId": "ms-dotnettools.csharp",
+                "publisherDisplayName": "ms-dotnettools"
+            },
+            "name": "csharp",
+            "publisher": "ms-dotnettools",
+            "version": "2.10.28"
+        },
+        {
+            "metadata": {
+                "id": "1aab81a1-b3d9-4aef-976b-577d5d90fe3f",
+                "publisherId": "ms-dotnettools.vscode-dotnet-runtime",
+                "publisherDisplayName": "ms-dotnettools"
+            },
+            "name": "vscode-dotnet-runtime",
+            "publisher": "ms-dotnettools",
+            "version": "2.0.0"
+        },
+        {
+            "metadata": {
+                "id": "93ce222b-5f6f-49b7-9ab1-a0463c6238df",
+                "publisherId": "ms-vscode-remote.remote-containers",
+                "publisherDisplayName": "ms-vscode-remote"
+            },
+            "name": "remote-containers",
+            "publisher": "ms-vscode-remote",
+            "version": "0.321.0"
+        },
+        {
+            "metadata": {
+                "id": "f0c5397b-d357-4197-99f0-cb4202f22818",
+                "publisherId": "ms-vscode-remote.remote-wsl",
+                "publisherDisplayName": "ms-vscode-remote"
+            },
+            "name": "remote-wsl",
+            "publisher": "ms-vscode-remote",
+            "version": "0.81.8"
+        },
+        {
+            "metadata": {
+                "id": "33ce9d6b-41cf-4972-a62b-386f7201981d",
+                "publisherId": "Prisma.prisma",
+                "publisherDisplayName": "Prisma"
+            },
+            "name": "prisma",
+            "publisher": "Prisma",
+            "version": "5.6.0"
+        },
+        {
+            "metadata": {
+                "id": "2061917f-f76a-458a-8da9-f162de22b97e",
+                "publisherId": "redhat.vscode-yaml",
+                "publisherDisplayName": "redhat"
+            },
+            "name": "vscode-yaml",
+            "publisher": "redhat",
+            "version": "1.14.0"
+        }
+    ]
+}
