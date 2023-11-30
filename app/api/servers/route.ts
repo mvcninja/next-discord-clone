@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { currentProfile } from "@/lib/current-profile";
 import { MemberRole } from "@prisma/client";
-import { Hash } from "crypto";
 
 // api to create new server
 export async function POST(req: Request) {
