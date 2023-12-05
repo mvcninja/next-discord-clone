@@ -3,7 +3,7 @@ import { db } from "@/lib/db";
 import { currentProfile } from "@/lib/current-profile";
 import { MemberRole } from "@prisma/client";
 
-// api to create new server
+// api to create new channel
 export async function POST(req: Request) {
   try {
 
