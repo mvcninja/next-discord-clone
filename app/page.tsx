@@ -26,6 +26,9 @@ export default async function Home() {
   return (
     <main className='flex flex-col'>
       <h1>Welcome to Encord!</h1>
+      <a href="/sign-in" className="h-8 w-40 text-center align-middle rounded-md bg-indigo-700">
+        Login
+      </a>
       <UserButton afterSignOutUrl="/" />
       <ModeToggle />
     </main>
