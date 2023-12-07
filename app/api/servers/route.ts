@@ -21,9 +21,19 @@ export async function POST(req: Request) {
         imageUrl,
         inviteCode: crypto.randomUUID(),
         channels: {
-          create: [
-            { profileId: profile.id, name: "general" }
-          ]
+          create: [{
+            profile: {
+              connect: {
+                id: profile.id
+              }
+            },
+            name: "general",
+            type: "TEXT",
+            conversation: {
+              create: {
+              }
+            }
+          }]
         },
         members: {
           create: [

@@ -83,6 +83,9 @@ model Member {
   serverId String
   server Server @relation(fields: [serverId], references: [id], onDelete: Cascade)
 
+  messages Message[]
+  conversations Conversation[]
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -107,9 +110,44 @@ model Channel {
   serverId String
   server Server @relation(fields: [serverId], references: [id], onDelete: Cascade)
 
+  conversationId String @unique
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@index([profileId])
   @@index([serverId])
 }
+
+//----------------------------------------------------------------------------
+
+model Conversation {
+  id String @id @default(uuid())
+  members Member[]  // only used for direct messages
+  messages Message[]
+  channel Channel?  // only used for channel messages
+}
+
+model Message {
+  id String @id @default(uuid())
+  content String
+
+  fileUrl String?
+  
+  memberId String
+  member Member @relation(fields: [memberId], references: [id], onDelete: NoAction)
+
+  conversationId String
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: NoAction)
+
+  deleted Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([memberId])
+  @@index([conversationId])
+}
+
+//----------------------------------------------------------------------------

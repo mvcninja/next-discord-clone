@@ -33,9 +33,16 @@ export async function POST(req: Request) {
       data: {
         channels: {
           create: {
-            profileId: profile.id,
+            profile: {
+              connect: {
+                id: profile.id
+              }
+            },
             name,
             type,
+            conversation: {
+              create: { }
+            }
           }
         }
       }
