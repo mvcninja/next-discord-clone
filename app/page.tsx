@@ -1,6 +1,8 @@
 import { ModeToggle } from "@/components/mode-toggle";
+import { Badge } from "@/components/ui/badge";
 import { db } from "@/lib/db";
 import { UserButton, auth } from "@clerk/nextjs";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
@@ -24,11 +26,11 @@ export default async function Home() {
   }
 
   return (
-    <main className='flex flex-col'>
+    <main className="flex flex-col">
       <h1>Welcome to Encord!</h1>
-      <a href="/sign-in" className="h-8 w-40 text-center align-middle rounded-md bg-indigo-700">
-        Login
-      </a>
+      <Badge className="w-20 text-md">
+        <Link href="/sign-in">&gt; Login</Link>
+      </Badge>
       <UserButton afterSignOutUrl="/" />
       <ModeToggle />
     </main>
